@@ -8,6 +8,11 @@ public class HelloViewController {
 
     @GetMapping("/static-hello")
     public String hello() {
-        return "Hello html";
+        return "hello.html";
+    }
+
+    @GetMapping("/html/redirect")
+    public String htmlRedirect(){
+        return "redirect:/hello.html";
     }
 }
