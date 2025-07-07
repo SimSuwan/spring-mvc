@@ -1,5 +1,6 @@
 package com.metaverse.springmvc.controller;
 
+import com.metaverse.springmvc.domain.star;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -10,5 +11,12 @@ public class DataResponseController {
     @ResponseBody
     public String helloStringjson(){
         return "{\"name\" : \"Meta\", \"age\" : 95}";
+    }
+
+
+    @GetMapping("response/json/instance")
+    @ResponseBody
+    public star helloInstancejson(){
+        return new star("Meta", 88);
     }
 }
